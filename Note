@@ -43,6 +43,11 @@ Added twiter bootsrap helper to help make pagination aligned to the center by us
 php artisan vendor:publish --tag=laravel-pagination
 add justify-content-center to the ul class alonside the pagination.
 
+// add a debug package
+composer require barryvdh/laravel-debugbar --development
+
+
+
 
 
 
