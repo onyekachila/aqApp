@@ -1,5 +1,8 @@
 <?php
 
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/questions', 'QuestionsController');

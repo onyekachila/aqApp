@@ -35,6 +35,14 @@ refacoring to use the database seeder class. I created factory to create 3 user 
 generate random 1 to 5 questions and finally we call make method to generate object ans store in memory instead of using create method.
 FInally we run php artisan migrate:refresh -- seed
 
+Created a resource QuestionsController --resource  but encountered an error had to remove the old using route statement and changed it touse Illuminate\Support\Facades\Route;
+pass all the questions to the view using compact method
+create an index.blade.php page and copy the content of the home page to the index.blade.php then edit to suit us.
+
+Added twiter bootsrap helper to help make pagination aligned to the center by using 
+php artisan vendor:publish --tag=laravel-pagination
+add justify-content-center to the ul class alonside the pagination.
+
 
 
 
