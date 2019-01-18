@@ -10,3 +10,31 @@ npm install
 
 php artisan make:auth to get layout
 change .env file to enable database access
+
+Created a one to many relationship between user and questions. i.e. a User can have many questions and a question belongs to a user
+We also set attribute mutator in the questions model to help us use the title as a slug.
+
+// Experimenting with git
+I created another branch by issuing the command
+git checkout -b <nameofbranch>
+git push origin nameofbranch  // this pushes the newly created code to github on a separate path.
+after working on the new branch we can revert back to the master branch by using the command
+git checkout master // this reverts back to the initial master we created when we did git init. This branch will miss the changes made in the other branch <nameofbranch>
+to merge the changes in the nameofbranch to master we use the command
+git merge nameofbranch  // this will cobine the code written in the last branch to the one in the master.
+We can also push the master branch to its own repository by using the command
+git push origin master
+
+We created another branch called second branch and in this branch I created a question factory by using the artisan command
+php artisan make:factory QuestionFactory
+
+Then we use tinker to create 3 users  - - php artisan tinker
+$factory->(App\User::class, 3)->create()
+
+refacoring to use the database seeder class. I created factory to create 3 user and for each of the user we 
+generate random 1 to 5 questions and finally we call make method to generate object ans store in memory instead of using create method.
+FInally we run php artisan migrate:refresh -- seed
+
+
+
+
