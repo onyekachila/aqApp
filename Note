@@ -1,0 +1,12 @@
+Full stack development using laravel and vue. 
+
+Git init the project and add everything to git then do initial commit.
+
+Create a new repository on my account in github and get the url of the newly crearted repository then push your code to github
+git remote add origin <nameofgitrepository.git>
+git push -u origin master
+
+npm install
+
+php artisan make:auth to get layout
+change .env file to enable database access
