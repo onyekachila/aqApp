@@ -46,6 +46,10 @@ add justify-content-center to the ul class alonside the pagination.
 // add a debug package
 composer require barryvdh/laravel-debugbar --development
 
+Added custom css to our sass file in the public directory then head to terminal to run 
+npm run dev // then 
+npm run watch // for subsequent changes made
+
 
 
 
