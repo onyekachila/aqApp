@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Question extends Model
 {
     protected $fillable = ['title', 'body'];
@@ -18,6 +19,12 @@ class Question extends Model
         $this->attributes['title'] = $value;
         $this->attributes['slug'] = str_slug($value);
     }
+
+    public function getUrlAttribute()
+    {
+        return route("questions.show", $this->slug);
+    }
+
 
     public function getCreatedDateAttribute()
     {
@@ -34,4 +41,10 @@ class Question extends Model
         }
         return "unanswered"; 
     }
+
+    public function getBodyHtmlAttribute()
+    {
+        return \Parsedown::instance()->text($this->body);
+    }
+
 }
